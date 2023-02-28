@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'v1'], function () {
 	Route::apiResource('food', FoodController::class);
+	Route::get('food/search/{query}', [FoodController::class, 'search']);
 });

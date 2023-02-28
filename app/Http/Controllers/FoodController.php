@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Food;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 
 class FoodController extends Controller
@@ -22,35 +21,14 @@ class FoodController extends Controller
 		return Response::json($foods, 200);
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 */
-	public function store(Request $request)
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 */
 	public function show(Food $food): JsonResponse
 	{
 		return Response::json($food, 200);
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 */
-	public function update(Request $request, Food $food)
+	public function search($query): JsonResponse
 	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 */
-	public function destroy(Food $food)
-	{
-		//
+		$foods = $this->model->where('name', 'like', '%' . $query . '%')->get();
+		return Response::json($foods, 200);
 	}
 }

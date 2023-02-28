@@ -16,24 +16,46 @@ class FoodSeeder extends Seeder
 			[
 				'name' => 'Burger',
 				'description' => 'Burger description',
-				'image' => 'https://via.placeholder.com/150',
+				// unsplash.com
+				'image' => 'https://images.unsplash.com/food',
 				'price' => '10.00',
 				'ingredients' => 'Burger ingredients',
 			],
 			[
 				'name' => 'Pizza',
 				'description' => 'Pizza description',
-				'image' => 'https://via.placeholder.com/150',
+				'image' => 'https://images.unsplash.com/food',
 				'price' => '10.00',
 				'ingredients' => 'Pizza ingredients',
 			],
 			[
 				'name' => 'Hotdog',
 				'description' => 'Hotdog description',
-				'image' => 'https://via.placeholder.com/150',
+				'image' => 'https://images.unsplash.com/food',
 				'price' => '10.00',
 				'ingredients' => 'Hotdog ingredients',
 			],
+			[
+				'name' => 'Sandwich',
+				'description' => 'Sandwich description',
+				'image' => 'https://images.unsplash.com/food',
+				'price' => '10.00',
+				'ingredients' => 'Sandwich ingredients',
+			],
+			[
+				'name' => 'Fries',
+				'description' => 'Fries description',
+				'image' => 'https://images.unsplash.com/food',
+				'price' => '10.00',
+				'ingredients' => 'Fries ingredients',
+			],
+			[
+				'name' => 'Salad',
+				'description' => 'Salad description',
+				'image' => 'https://images.unsplash.com/food',
+				'price' => '10.00',
+				'ingredients' => 'Salad ingredients',
+			]
 		];
 
 		foreach ($foods as $food) {
